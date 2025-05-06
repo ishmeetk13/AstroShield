@@ -107,6 +107,21 @@ def propagate(satrec,minutes=90,step=1):
 
 #load TLEs
 tle_data=fetch_tle() if data_mode=="Live Data" else load_demo_tle()
+if not tle_data:
+    if tle_type=="GPS-OPS":
+        with open("gps-ops.txt","r") as f:
+            tle_data=f.read()
+    elif tle_type=="Kuiper":
+        with open("kuiper.txt","r") as f:
+            tle_data=f.read()
+    elif tle_type=="OneWeb":
+        with open("oneweb.txt") as f:
+            tle_data=f.read()
+    elif tle_type=="Starlink":
+        with open("starlink.txt") as f:
+            tle_data=f.read()
+    else:
+        st.error("Error in fetching TLE data.")
 sats=[(entry[0],entry[1],entry[2]) for entry in tle_data]
 
 #Collision logic
