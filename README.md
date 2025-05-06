@@ -59,3 +59,6 @@ https://astroshield-cqzchan72ekhygvjgtaxpw.streamlit.app/
 
 Repository
 https://github.com/ishmeetk13/AstroShield
+
+Presentation
+https://drive.google.com/file/d/1CAf-Hi4pnTac9fiedaQdEV0R0FE0tDJF/view?usp=drivesdk
